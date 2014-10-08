@@ -1,0 +1,6 @@
+%h2 Submit Score
+= simple_form_for @submission do |f|
+	= f.association :user, label: "Player"
+	= f.association :game, label: "Game"
+	= f.input :score, label: "Score"
+	= f.button :submit, "Submit"
