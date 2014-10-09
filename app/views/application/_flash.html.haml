@@ -1,4 +1,8 @@
 .flash
-	- flash.each do |t, c|
-		.flash{class: t}
-			= c
+  -if flash[:notice].present?
+    .alert.alert-success{role: "alert"}
+      = flash[:notice]
+
+  -if flash[:error].present?
+    .alert.alert-warning{role: "alert"}
+      =flash[:error]
