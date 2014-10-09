@@ -5,6 +5,7 @@ deploy:
   provider: heroku
   api_key:
     secure: fBCFDHxwsQ15ySRSbuocxFTWtMiFO99+SyNhW62Y+IHU2K72suqjtcFH9VYJ/nZKlbz6xfsgdey9f1AvcDwQXcXjM9CesW6TzdFPSLNE3r1D6M85iysyDV7dUJMS8lrRANUEbS9asVpUGVO9cJO9OHTco5b0xIpCDV6c2oz7Ln4=
+  strategy: git
   app: retrovg
   on:
     repo: AlexGunslinger/retrovg-contest
