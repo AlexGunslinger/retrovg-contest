@@ -4,8 +4,13 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    @submission = Submission.create!(submission_params)
-    redirect_to :root, notice: "Good Luck!"
+    @submission = Submission.new(submission_params)
+    @submission.ip_address = request.remote_ip
+    if @submission.save
+      redirect_to :root, notice: "Good Luck!"
+    else
+      render "new"
+    end
   end
 
   private

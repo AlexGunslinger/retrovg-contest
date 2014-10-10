@@ -1,2 +1,18 @@
-%p Scoreboard
-= link_to("Submit New Score", submit_path)
+%h1 Scoreboard
+
+.progress
+  .progress-bar{ style: "width: 2%;" }
+
+%ul.nav.nav-tabs
+  %li.active
+    = link_to("Main", "#", data: {toggle: "tab"})
+  %li 
+    = link_to("Game 1", "#", data: {toggle: "tab"})
+  %li 
+    = link_to("Game 2", "#", data: {toggle: "tab"})
+  %li 
+    = link_to("Game 3", "#", data: {toggle: "tab"})
+  %li 
+    = link_to("Game 4", "#", data: {toggle: "tab"})
+  %li 
+    = link_to("Game 5", "#", data: {toggle: "tab"})
