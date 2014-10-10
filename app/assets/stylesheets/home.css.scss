@@ -1,3 +1,8 @@
+/* General */
+
+.page-header {
+  border-bottom: 1px solid;
+}
 
 /* NavBar */
 
@@ -11,9 +16,6 @@
 .navbar-default .navbar-brand:focus {
   color: #ffffff;
 }
-.navbar-default .navbar-text {
-  color: #777777;
-}
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
@@ -24,6 +26,7 @@
 .brand-logo {
   margin-left: 10px;
   width: 34px;
+  vertical-align: -10px;
 }
 
 /* Scoreboard */
@@ -31,4 +34,17 @@
 .col-centered{
   float: none;
   margin: 0 auto;
+}
+
+/* Footer */
+
+.navbar-footer {
+  font-size: 15px;
+}
+.navbar-default .navbar-text {
+  color: #808080;
+}
+.footer-image {
+  margin-left: 10px;
+  width: 60px;
 }
