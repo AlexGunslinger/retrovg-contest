@@ -27,5 +27,17 @@ describe "submit a new score" do
     expect(submission.score).to eq 99999
 	end
 
+  it "throw error if score is not integer" do
+    visit '/submit'
+    select player.name, from: 'submission_user_id'
+    select game.name, from: 'submission_game_id'
+    fill_in 'submission_score', with: "99999a"
+    expect {
+      click_button 'Submit'
+    }.to_not change(Submission, :count) 
+
+    expect(page.body).to include "Should be a number!"
+  end
+
 end
 	
