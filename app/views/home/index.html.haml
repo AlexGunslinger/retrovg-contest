@@ -8,10 +8,10 @@
       %th Player
       %th Score
   %tbody
-    - @players.each do |p|
+    - @players.each_with_index do |p, i|
       %tr
         %td
-          = p[:id]
+          = i + 1
         %td 
           = p[:name]
         %td 

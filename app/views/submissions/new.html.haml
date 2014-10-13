@@ -3,7 +3,7 @@
 .row
   .col-md-6.col-centered
     = simple_form_for(@submission, html: {class: ""})do |f|
-      = f.association :user, label: "Player"
-      = f.association :game, label: "Game"
+      = f.association :user, collection: @players, label: "Player"
+      = f.association :game, collection: @games, label: "Game"
       = f.input :score, label: "Score"
       = f.button :submit, "Submit"

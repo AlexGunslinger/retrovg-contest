@@ -1,6 +1,8 @@
 class SubmissionsController < ApplicationController
   def new
     @submission = Submission.new
+    @players    = User.order('name ASC')
+    @games      = Game.order('name ASC')
   end
 
   def create
