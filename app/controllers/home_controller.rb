@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @players = User.all
+    @players = FetchMainScoreboard.call
   end
 end
