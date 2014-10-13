@@ -1,7 +1,7 @@
 class FetchMainScoreboard
 
   def self.call()
-    users = User.all
+    users = User.order('name DESC')
     players = Array.new
 
     users.each do |u|
