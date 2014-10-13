@@ -7,7 +7,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.new(submission_params)
     @submission.ip_address = request.remote_ip
     if @submission.save
-      redirect_to :root, notice: "Good Luck!"
+      redirect_to scoreboard_game_path(@submission.game), notice: "Good Luck!"
     else
       render "new"
     end

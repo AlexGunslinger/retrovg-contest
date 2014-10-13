@@ -1,0 +1,15 @@
+.page-header
+  %h1 Games
+
+.game-list
+  .row
+    .col-xs-15
+      .games-container
+        - Game.all.in_groups_of(4).each do |g|
+          -g.each do |game|
+            - next if game.nil?
+            .grid.text-center
+              .game-thumb
+                = link_to(image_tag('http://www.retrouprising.com/arcade/images/nintendo/godzilla-monster-of-monsters.jpg', class: "game-image img-circle"), scoreboard_game_path(game))
+                %h4.text-center
+                  = game.name    
