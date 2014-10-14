@@ -1,8 +1,8 @@
-%h2.text-center Submit Score
-%br
+.page-header
+  %h1.text-center Submit Score
 .row
   .col-md-6.col-centered
-    = simple_form_for(@submission, html: {class: ""})do |f|
+    = simple_form_for(@submission, html: {class: "submission-form"})do |f|
       = f.association :user, collection: @players, label: "Player"
       = f.association :game, collection: @games, label: "Game"
       = f.input :score, label: "Score"
