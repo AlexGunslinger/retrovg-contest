@@ -15,7 +15,7 @@ class FetchMainScoreboard
       end
     end
 
-    players.sort_by {|p| p[:points]}.reverse
+    players.sort_by {|p| [-p[:points], p[:name]]}
   end
 
 end
