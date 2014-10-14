@@ -24,3 +24,16 @@ body .game-thumb {
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
   position: relative;
 }
+
+.link-ru a,
+.link-ru a:hover,
+.link-ru a:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  body .link-ru {
+    display: none;
+  }
+}

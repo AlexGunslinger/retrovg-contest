@@ -1,6 +1,10 @@
-.page-header
-  %h1 
-    = "#{@game.name} Scoreboard" 
+.row
+  .col-lg-12
+    .page-header
+      %h1 
+        = "#{@game.name} Scoreboard" 
+        = link_to_ru(@game, "Go to Retro Uprising Page")
+
 
 %table.table.table-striped.table-hover
   %thead

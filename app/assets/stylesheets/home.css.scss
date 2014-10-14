@@ -36,13 +36,16 @@ body .main-container {
   color: #ffffff;
   text-decoration: none;
 }
+
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #A9B4C0;
 }
+
 .brand-logo {
   margin-left: 10px;
   width: 34px;
@@ -52,6 +55,7 @@ body .main-container {
 .navbar-fixed-bottom {
   margin-top: 21px;
 }
+
 /* Scoreboard */
 
 .col-centered{
@@ -64,9 +68,12 @@ body .main-container {
 .navbar-footer {
   font-size: 15px;
 }
+
 .navbar-default .navbar-text {
-  color: #808080;
+  color: #FFF;
+  font-size: 13px;
 }
+
 .footer-image {
   margin-left: 10px;
   width: 60px;
