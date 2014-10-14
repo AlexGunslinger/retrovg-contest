@@ -9,3 +9,7 @@ deploy:
   app: retrovg
   on:
     repo: AlexGunslinger/retrovg-contest
+  run: 
+    - "rake db:migrate"
+    - restart
+
