@@ -15,9 +15,12 @@ body {
 .navbar-brand {
   font-size: 20px;
 }
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
+
+.navbar-default .navbar-brand a,
+.navbar-default .navbar-brand a:hover,
+.navbar-default .navbar-brand a:focus {
   color: #ffffff;
+  text-decoration: none;
 }
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
