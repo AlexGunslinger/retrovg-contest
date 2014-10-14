@@ -1,8 +1,9 @@
 class SubmissionsController < ApplicationController
+
+  before_filter :fetch_players_and_games, only: [:new, :create]
+
   def new
     @submission = Submission.new
-    @players    = User.order('name ASC')
-    @games      = Game.order('name ASC')
   end
 
   def create
@@ -21,4 +22,9 @@ class SubmissionsController < ApplicationController
     params.require(:submission).permit(:user_id, :game_id, :score)
   end
   
+  def fetch_players_and_games
+    @players    = User.order('name ASC')
+    @games      = Game.order('name ASC')
+  end
+
 end
