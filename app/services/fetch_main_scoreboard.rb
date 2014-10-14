@@ -11,7 +11,7 @@ class FetchMainScoreboard
     Game.all.each do |g|
       game_scoreboard = User.scoreboard(g.id)
       game_scoreboard.each_with_index do |gs, i|
-        players.find{|p| p[:id] == gs.id}[:points] += (players.size - (i + 1))
+        players.find{|p| p[:id] == gs.id}[:points] += players.size - i
       end
     end
 
