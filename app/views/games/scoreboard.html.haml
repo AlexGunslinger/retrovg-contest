@@ -6,18 +6,32 @@
         = link_to_ru(@game, "Go to Retro Uprising Page")
 
 
-%table.table.table-striped.table-hover
-  %thead
-    %tr
-      %th Pos
-      %th Player
-      %th Score
-  %tbody
-    - @players.each_with_index do |player, i|
-      %tr
-        %td
-          = i + 1
-        %td 
-          = player.name
-        %td 
-          = player.max_score
+.row
+  .col-lg-8
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th Pos
+          %th Player
+          %th Score
+      %tbody
+        - @players.each_with_index do |player, i|
+          %tr
+            %td
+              = i + 1
+            %td 
+              = player.name
+            %td 
+              = player.max_score  
+
+  .col-lg-4
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title 
+          Latest Submissions
+      .list-group
+        - @latest_sub.each do |submission|
+          .list-group-item
+            %span.badge
+              = submission.score
+            = submission.user.name

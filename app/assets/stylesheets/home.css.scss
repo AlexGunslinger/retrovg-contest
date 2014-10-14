@@ -78,6 +78,17 @@ body .game-scoreboard {
 .main-scoreboard {
   margin-bottom: 50px;
 }
+
+/* Latest Submissions */
+
+.list-group a,
+.list-group a:hover,
+.list-group a:focus {
+  color: #3498db;
+  text-decoration: none;
+}
+
+
 /* Footer */
 
 .navbar-footer {
