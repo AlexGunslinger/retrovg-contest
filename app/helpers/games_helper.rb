@@ -1,6 +1,6 @@
 module GamesHelper
 
-  def link_to_ru(game, text)
-    link_to(content_tag(:div, text, class: "btn btn-primary pull-right link-ru"), game.link, target: "_blank") 
+  def button_link(link, text, style='', target='')
+    link_to(content_tag(:div, text, class: "btn #{style} pull-right link-ru"), link, target: "#{target}") 
   end
 end

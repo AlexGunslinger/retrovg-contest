@@ -2,9 +2,9 @@
   .col-lg-12
     .page-header
       %h1 
-        = "#{@game.name} Scoreboard" 
-        = link_to_ru(@game, "Go to Retro Uprising Page")
-
+        = "#{@game.name} Scoreboard"
+        = button_link(@game.link, 'Go to Retro Uprising Page', 'btn-primary', 'blank')
+        = button_link(games_path, "Back to Game List") 
 
 .row
   .col-lg-8

@@ -31,7 +31,7 @@
     </div>
   </div>
   
-  <div class="back-container" style = 'background: url("<%= @game.background_link if @game %>") no-repeat center; background-size: 100% 100%;'>
+  <div class="back-container" style = 'background: url("<%= @game.background_link if @game %>") no-repeat center; background-size: cover;'>
     <div class="container main-container <%= controller_name == 'games' && action_name == 'scoreboard' ? 'game-scoreboard' : '' %>">
       <%= render 'flash' %>
       <%= yield %>
