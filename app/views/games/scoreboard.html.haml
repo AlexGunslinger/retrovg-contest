@@ -16,7 +16,7 @@
           %th Score
       %tbody
         - @players.each_with_index do |player, i|
-          %tr
+          %tr{ class: ("info" if cookies[:player_id].to_i == player.id)}
             %td
               = i + 1
             %td 

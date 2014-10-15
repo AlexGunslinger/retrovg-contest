@@ -1,7 +1,6 @@
 .page-header
   %h1.text-left Main Scoreboard
 
-
 .row
   .col-lg-8
     %table.table.table-striped.table-hover.main-scoreboard
@@ -12,7 +11,7 @@
           %th Score
       %tbody
         - @players.each_with_index do |p, i|
-          %tr
+          %tr{ class: ("info" if cookies[:player_id].to_i == p[:id])}
             %td
               = i + 1
             %td 
@@ -30,11 +29,4 @@
           .list-group-item
             %span.badge
               = submission.score
-            = player_submission(submission) 
-      
-    / .list-group
-    /   .list-group-item.panel-primary.active
-    /     Latest Submissions
-    /   - @latest_sub.each do |submission|
-    /     .list-group-item
-    /       = "#{link_to(submission.user.name, '#')} <span class='small'>scored</span> #{submission.score} <span class='small'>playing</span> #{link_to(submission.game.name, scoreboard_game_path(submission.game))}".html_safe
+            = player_submission(submission)
