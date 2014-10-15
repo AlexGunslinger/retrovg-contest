@@ -15,7 +15,7 @@ class FetchMainScoreboard
       end
     end
 
-    players.sort_by {|p| [-p[:points], p[:name]]}
+    players.sort_by {|p| [-p[:points], p[:name].capitalize]}
   end
 
 end
