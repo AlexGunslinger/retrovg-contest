@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources 'submissions', only: [:new, :create]
 
   get '/submit', to: 'submissions#new'
+  get '/scoreboard', to: 'home#scoreboard'
+  get '/player_scoreboard/:id', to: 'home#player_scoreboard', as: 'player_scoreboard'
 
   root to: 'home#index'
 

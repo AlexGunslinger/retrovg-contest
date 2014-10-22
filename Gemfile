@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml'
 gem 'simple_form', '3.1.0.rc2'
+gem 'bower-rails'
+gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'byebug'
@@ -23,15 +25,17 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 group :test do
-	gem 'rspec-set'
-	gem 'capybara'
+  gem 'rspec-set'
+  gem 'capybara'
 end
 
 group :production do
-	gem 'unicorn'
-	gem 'heroku-deflater'
-	gem 'rails_12factor'
+  gem 'unicorn'
+  gem 'heroku-deflater'
+  gem 'rails_12factor'
 end

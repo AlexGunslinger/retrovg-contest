@@ -84,6 +84,13 @@ body .game-scoreboard {
   margin-bottom: 50px;
 }
 
+.scoreboard a,
+.scoreboard a:hover,
+.scoreboard a:focus {
+  color: #3498db;
+  text-decoration: none !important;
+}
+
 /* Latest Submissions */
 
 .list-group a,
@@ -115,3 +122,4 @@ body .game-scoreboard {
 .alert-success {
   margin-top: 21px;
 }
+
