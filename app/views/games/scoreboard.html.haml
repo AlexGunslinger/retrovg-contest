@@ -21,7 +21,7 @@
         - @players.each_with_index do |player, i|
           %tr{ class: ("info" if cookies[:player_id].to_i == player.id)}
             %td
-              = i + 1
+              = (@game.name == 'Contra' && player.max_score > 1000000) ? 1 : i + 1
             %td 
               = player.name
             %td 
