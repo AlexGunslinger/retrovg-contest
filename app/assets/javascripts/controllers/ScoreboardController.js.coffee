@@ -23,6 +23,9 @@ controllers.controller("ScoreboardController", [ '$scope', '$routeParams', '$loc
         $scope.template_submissions = "player_submissions.html"
       )
 
-    $scope.displayMain() 
+    if $routeParams.playerId
+      $scope.displayPlayer($routeParams.playerId) 
+    else
+      $scope.displayMain()
 
 ])
