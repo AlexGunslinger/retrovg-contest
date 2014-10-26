@@ -9,9 +9,10 @@ class FetchMainScoreboard
     end
 
     Game.all.each do |g|
-      game_scoreboard = User.scoreboard(g.id)
-      game_scoreboard.each_with_index do |gs, i|
-        players.find{|p| p[:id] == gs.id}[:points] += players.size - i
+      user_game_scoreboard = User.scoreboard(g.id)
+      user_game_scoreboard.each_with_index do |ugs, i|
+        points = (g.name == "Contra" && ugs.max_score > 1000000) ? players.size : players.size - i
+        players.find{|p| p[:id] == ugs.id}[:points] += points
       end
     end
 
