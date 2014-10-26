@@ -1,8 +1,12 @@
 .flash
   -if flash[:notice].present?
-    .alert.alert-success{role: "alert"}
+    .alert.alert-dismissable.alert-success{role: "alert"}
       = flash[:notice]
 
   -if flash[:error].present?
-    .alert.alert-warning{role: "alert"}
+    .alert.alert-dismissable.alert-danger{role: "alert"}
       =flash[:error]
+
+  -if flash[:warning].present?
+    .alert.alert-dismissable.alert-warning{role: "alert"}
+      =flash[:warning]

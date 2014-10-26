@@ -2,12 +2,13 @@ controllers = angular.module('controllers')
 
 controllers.controller("ScoreboardController", [ '$scope', '$routeParams', '$location', '$http',
   ($scope, $routeParams, $location, $http)->
-    $http.get('/scoreboard.json').success((data) ->
-      $scope.players     = data.players
-      $scope.submissions = data.submissions
-    )
 
     $scope.displayMain = () ->
+      $http.get('/scoreboard.json').success((data) ->
+        $scope.contra_link = data.contra_link
+        $scope.players     = data.players
+        $scope.submissions = data.submissions
+      )
       $scope.title   = "Main Scoreboard"
       $scope.notMain = false
       $scope.template_scoreboard  = "main_scoreboard.html"

@@ -6,6 +6,8 @@ json.players @players do |player|
   pos += 1
 end
 
+json.contra_link scoreboard_game_path(Game.find_by_name("Contra"))
+
 json.submissions @latest_sub do |submission|
   json.extract! submission, :score
   json.player_name submission.user.name

@@ -1,5 +1,14 @@
 /* General */
 
+.flash {
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.big-font {
+  font-size: 17px;
+}
+
 .page-header {
   border-bottom: 1px solid;
 }
@@ -123,3 +132,9 @@ body .game-scoreboard {
   margin-top: 21px;
 }
 
+.flash > a,
+.flash > a:hover,
+.flash > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
