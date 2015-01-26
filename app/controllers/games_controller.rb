@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.order('name ASC')
+    @tournament = Tournament.find(2)
+    @games      = @tournament.games.order('name ASC')
   end
 
   def scoreboard

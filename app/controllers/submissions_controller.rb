@@ -24,8 +24,9 @@ class SubmissionsController < ApplicationController
   end
   
   def fetch_players_and_games
-    @players = User.order('name ASC')
-    @games   = Game.order('name ASC')
+    @tournament = Tournament.find(2) 
+    @players    = @tournament.users.order('name ASC')
+    @games      = @tournament.games.order('name ASC')
   end
 
   def set_player_cookie
