@@ -16,6 +16,7 @@ gem 'haml'
 gem 'simple_form', '3.1.0.rc2'
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'truncate_html', path: "/home/alejandro/projects/gems/truncate_html"
 
 group :development, :test do
   gem 'byebug'
