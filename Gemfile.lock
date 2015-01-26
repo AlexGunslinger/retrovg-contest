@@ -1,8 +1,3 @@
-PATH
-  remote: /home/alejandro/projects/gems/truncate_html
-  specs:
-    truncate_html (0.9.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -240,7 +235,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form (= 3.1.0.rc2)
   spring
-  truncate_html!
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
