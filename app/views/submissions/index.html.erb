@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Submissions</h1>
+
+<div class="col-lg-8 scoreboard">
+  <table class="table table-striped table-hover main-scoreboard">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Score</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @submissions.each do |submission| %>
+        <tr>
+          <th><%= submission.user.name %></th>
+          <th><%= submission.user.team.name %></th>
+          <th><%= submission.score %></th>
+          <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
+          <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>

@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources 'submissions', only: [:new, :create]
+  resources 'users'
+  resources 'submissions'
 
   get '/submit', to: 'submissions#new'
   get '/scoreboard', to: 'home#scoreboard'

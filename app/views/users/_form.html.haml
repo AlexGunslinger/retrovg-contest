@@ -1,0 +1,7 @@
+.row
+  .col-md-6.col-centered
+    = simple_form_for(@user) do |f|
+      = f.error_notification
+      = f.input :name, label: "Name"
+      = f.association :team, collection: Team.all, label: "Team"
+      = f.button :submit, "Submit", class: "btn-primary"
