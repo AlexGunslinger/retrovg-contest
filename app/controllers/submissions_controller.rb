@@ -29,7 +29,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
     respond_to do |format|
       if @submission.update(submission_params)
-        format.html { redirect_to submissions_path, notice: 'Submission was successfully updated.' }
+        format.html { redirect_to submissionsonlywolf_path, notice: 'Submission was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -42,7 +42,7 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
     @submission.destroy
     respond_to do |format|
-      format.html { redirect_to submissions_url, notice: 'Submission was successfully destroyed.' }
+      format.html { redirect_to submissionsonlywolf_url, notice: 'Submission was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     @user.tournament_id = 2
     respond_to do |format|
       if @user.save
-        format.html { redirect_to users_path, notice: 'Player was successfully created.' }
+        format.html { redirect_to playersonlywolf_path, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to users_path, notice: 'Player was successfully updated.' }
+        format.html { redirect_to playersonlywolf_path, notice: 'Player was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Player was successfully destroyed.' }
+      format.html { redirect_to playersonlywolf_url, notice: 'Player was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
