@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Players - Total: <%= @users.size %></h1>
+<h1>Listing Players - Total: <%= @users.size %></h1> <%= link_to 'Add Player', new_user_path %>
 
-<div class="col-lg-8 scoreboard">
+
+<div class="col-lg-15 scoreboard">
   <table class="table table-striped table-hover main-scoreboard">
     <thead>
       <tr>
@@ -24,5 +25,3 @@
   </table>
 </div>
 <br>
-
-<%= link_to 'Add Player', new_user_path %>
