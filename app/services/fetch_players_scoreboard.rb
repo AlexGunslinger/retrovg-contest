@@ -25,7 +25,7 @@ class FetchPlayersScoreboard
 
       user_game_scoreboard.each_with_index do |ugs, i|
         teamsf.find{|t| t[:id] == ugs.team_id}[:many] += 1
-        if teamsf.find{|t| t[:id] == ugs.team_id}[:many] < 3
+        if teamsf.find{|t| t[:id] == ugs.team_id}[:many] < 6
           players.find{|p| p[:id] == ugs.id}[:points] += points
           points -= 1
         end
