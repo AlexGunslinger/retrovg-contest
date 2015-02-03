@@ -8,6 +8,7 @@ controllers.controller("ScoreboardController", [ '$scope', '$routeParams', '$loc
         $scope.contra_link = data.contra_link
         $scope.players     = data.players
         $scope.submissions = data.submissions
+        $scope.teams       = data.teams
       )
       $scope.title   = "Main Scoreboard"
       $scope.notMain = false

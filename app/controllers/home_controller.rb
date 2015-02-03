@@ -4,8 +4,9 @@ class HomeController < ApplicationController
 
   def scoreboard
     @tournament = Tournament.find(2)
-    @players    = @tournament.users.order("name ASC")
-    #@players    = FetchMainScoreboard.call
+    #@players    = @tournament.users.order("name ASC")
+    @players    = FetchPlayersScoreboard.call
+    @teams      = FetchTeamsScoreboard.call(@players)
     @latest_sub = Submission.order("created_at DESC").limit(Submission::LATEST)
   end
 
