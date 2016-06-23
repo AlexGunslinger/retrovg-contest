@@ -14,18 +14,31 @@
     %table.table.table-striped.table-hover
       %thead
         %tr
+          %th 
           %th Pos
           %th Player
+          %th Team
           %th Score
+          %th Points
       %tbody
+        - points = 20
         - @players.each_with_index do |player, i|
+          - @teamsf.find{|t| t[:id] == player.team_id}[:many] += 1
           %tr{ class: ("info" if cookies[:player_id].to_i == player.id)}
+            %td
+              = @teamsf.find{|t| t[:id] == player.team_id}[:many] < 6 ? image_tag("okicon.png", alt: "Qualified Score") : "" 
             %td
               = (@game.name == 'Contra' && player.max_score > 1000000) ? 1 : i + 1
             %td 
               = player.name
             %td 
+              = player.team_name
+            %td 
               = player.max_score  
+            %td
+              - if @teamsf.find{|t| t[:id] == player.team_id}[:many] < 6
+                = points
+                - points -= 1
 
   .col-lg-4
     .panel.panel-primary

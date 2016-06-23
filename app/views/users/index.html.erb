@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Players - Total: <%= @users.size %></h1> <%= link_to 'Add Player', new_user_path %>
+
+
+<div class="col-lg-15 scoreboard">
+  <table class="table table-striped table-hover main-scoreboard">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Team</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th><%= user.name %></th>
+          <th><%= user.team.name %></th>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>

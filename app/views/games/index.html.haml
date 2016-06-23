@@ -10,6 +10,6 @@
             - next if game.nil?
             .grid.text-center
               .game-thumb
-                = link_to(image_tag(game.image_link, class: "game-image img-circle"), scoreboard_game_path(game))
+                = link_to(image_tag("http://emulators.theoldcomputer.com/images/manufacturers_systems/MAME/ANDROID/365364mame-logo1.jpg", class: "game-image img-circle"), scoreboard_game_path(game))
                 %h4.text-center
                   = game.name    
