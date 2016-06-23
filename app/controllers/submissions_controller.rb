@@ -22,10 +22,10 @@ class SubmissionsController < ApplicationController
   def submission_params
     params.require(:submission).permit(:user_id, :game_id, :score)
   end
-  
+
   def fetch_players_and_games
-    @players = User.order('name ASC')
-    @games   = Game.order('name ASC')
+    @players = User.tournament_one.order('name ASC')
+    @games   = Game.tournament_one.order('name ASC')
   end
 
   def set_player_cookie
@@ -33,5 +33,5 @@ class SubmissionsController < ApplicationController
       cookies[:player_id] = @submission.user_id
     end
   end
-  
+
 end
