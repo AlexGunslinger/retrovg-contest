@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def scoreboard
     @players    = FetchMainScoreboard.call
-    @latest_sub = Submission.order("created_at DESC").limit(Submission::LATEST)
+    @latest_sub = Submission.tournament_one.order("created_at DESC").limit(Submission::LATEST)
   end
 
   def player_scoreboard

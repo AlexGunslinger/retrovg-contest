@@ -1,5 +1,7 @@
 class SubmissionsController < ApplicationController
 
+  scope :tournament_one, -> { where("user_id < 74") }
+
   before_filter :fetch_players_and_games, only: [:new, :create]
 
   def new
